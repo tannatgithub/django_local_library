@@ -1,0 +1,71 @@
+<html>
+   <head>   
+      <script type = "text/javascript">
+            function WriteCookie() {
+               if( document.myform.customer.value == "" ) {
+                  alert("Enter some value!");
+                  return;
+               }
+               cookievalue = escape(document.myform.customer.value) + ";";
+               document.cookie = "InputCookie=" + cookievalue;
+               documnet.cookie ="CodeCookie="+"FromCode"
+            //    document.write ("Setting Cookies : " + "name=" + cookievalue );
+            }
+
+            function ReadCookie() {
+                var allcookies = document.cookie;
+                document.write ("All Cookies : " + allcookies +"<br>" );
+                document.write("<h1>THIS IS THE LIST OF COOKIES</h1>");
+                
+                // Get all the cookies pairs in an array
+                cookiearray = allcookies.split(';');
+                
+                // Now take key value pair out of this array
+                for(var i=0; i<cookiearray.length; i++) {
+                    name = cookiearray[i].split('=')[0];
+                    value = cookiearray[i].split('=')[1];
+                    document.write("<br>")
+                    document.write("<h1>BREAK</h1>")
+                    document.write("<br>")
+                    document.write ("Key is : " + name);
+                    document.write("<br>")
+                    document.write(" and Value is : " + value);
+                }
+            } 
+      </script>     
+
+   </head>
+   
+   <body>      
+      <form name = "myform" action = "">
+         Enter name: <input type = "text" name = "customer"/>
+         <input type = "button" value = "Set Cookie" onclick = "WriteCookie();"/>
+      </form>  
+
+      <form name = "myform2" action = "">
+        <p> click the following button and see the result:</p>
+        <input type = "button" value = "Get Cookie" onclick = "ReadCookie()"/>
+     </form> 
+
+
+     <p>Click the button to display the array values after the split.</p>
+
+     <button onclick="myFunction()">Try it</button>
+     
+     <p id="demo"></p>
+     
+     <script>
+     function myFunction() {
+       var str = "How are you doing today?";
+       var res = str.split(" ");
+       document.write(res[0]);
+       document.write ("<br>")
+       document.write(res[1]);
+       document.write ("<br>")
+       document.write(res[2]);
+     }
+     </script>
+
+     
+   </body>
+</html>

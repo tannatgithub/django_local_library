@@ -1,0 +1,27 @@
+<!-- https://www.kirupa.com/html5/making_http_requests_js.htm -->
+<!DOCTYPE html>
+
+<html>
+
+<head>
+  <title>Display IP Address</title>
+</head>
+
+<body>
+    <h1 id=ipText></h1>
+    <p>( This is your IP address...probably :P )</p>
+    <script>
+      fetch("https://ipinfo.io/json")
+        .then(function (response) {
+          return response.json();
+        })
+        .then(function (myJson) {
+          document.querySelector("#ipText").innerHTML = myJson.ip;
+        })
+        .catch(function (error) {
+          console.log("Error: " + error);
+        });
+    </script>
+  </body>
+
+</html>
