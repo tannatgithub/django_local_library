@@ -27,7 +27,7 @@ SECRET_KEY = 'i8g8#$8ffdx#86i*=njqxf%*7_y_g-127zbv7q#tu57jd87$5&'
 DEBUG = True
 # DEBUG = False
 
-ALLOWED_HOSTS = ['tuan-ecommerce-app.herokuapp.com/','127.0.0.1']
+ALLOWED_HOSTS = ['tuan-ecommerce-app.herokuapp.com','127.0.0.1']
 # ALLOWED_HOSTS = []
 
 # Application definition
