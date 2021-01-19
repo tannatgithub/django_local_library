@@ -24,9 +24,10 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'i8g8#$8ffdx#86i*=njqxf%*7_y_g-127zbv7q#tu57jd87$5&'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+# DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['tuan-ecommerce-app.herokuapp.com','127.0.0.1']
 
 
 # Application definition
@@ -121,6 +122,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/3.1/howto/static-files/
 
 # STATIC_URL = 'static/'
+STATIC_ROOT =  os.path.join(BASE_DIR,'staticfiles')
 STATIC_URL = 'ecommerce/ecommerce/static/'
 
 STATICFILES_DIRS = [
